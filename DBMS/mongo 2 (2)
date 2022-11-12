@@ -1,0 +1,1383 @@
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo --v
+Error parsing command line: unknown option v
+try './mongo --help' for more information
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ 
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ mongo --help
+
+Command 'mongo' not found, but can be installed with:
+
+sudo apt install mongodb-clients
+
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo --help
+MongoDB shell version: 2.6.3
+usage: ./mongo [options] [db address] [file names (ending in .js)]
+db address can be:
+  foo                   foo database on local machine
+  192.169.0.5/foo       foo database on 192.168.0.5 machine
+  192.169.0.5:9999/foo  foo database on 192.168.0.5 machine on port 9999
+Options:
+  --shell                               run the shell after executing files
+  --nodb                                don't connect to mongod on startup - no
+                                        'db address' arg expected
+  --norc                                will not run the ".mongorc.js" file on 
+                                        start up
+  --quiet                               be less chatty
+  --port arg                            port to connect to
+  --host arg                            server to connect to
+  --eval arg                            evaluate javascript
+  -h [ --help ]                         show this usage information
+  --version                             show version information
+  --verbose                             increase verbosity
+  --ipv6                                enable IPv6 support (disabled by 
+                                        default)
+
+Authentication Options:
+  -u [ --username ] arg                 username for authentication
+  -p [ --password ] arg                 password for authentication
+  --authenticationDatabase arg          user source (defaults to dbname)
+  --authenticationMechanism arg (=MONGODB-CR)
+                                        authentication mechanism
+  --gssapiServiceName arg (=mongodb)    Service name to use when authenticating
+                                        using GSSAPI/Kerberos
+  --gssapiHostName arg                  Remote host name to use for purpose of 
+                                        GSSAPI/Kerberos authentication
+
+file names: a list of files to run. files have to end in .js and will exit after unless --shell is specified
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongod --version
+db version v2.6.3
+2022-10-31T14:47:32.160+0530 git version: 255f67a66f9603c59380b2a389e386910bbb52cb
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:48:18.856+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:48:25.008+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:49:04.480+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:49:10.875+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:49:15.718+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/te31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/te31342db
+2022-10-31T14:49:23.870+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/t31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/t31342db
+2022-10-31T14:49:47.749+0530 Error: 18 { ok: 0.0, errmsg: "auth failed", code: 18 } at src/mongo/shell/db.js:1210
+exception: login failed
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/mongot31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/mongot31342db
+> db.mobile.find().pretty();
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.createIndex({price:1});
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 1,
+	"numIndexesAfter" : 2,
+	"ok" : 1
+}
+> db.mobile.createIndex({name:1,brand:1});
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 2,
+	"numIndexesAfter" : 3,
+	"ok" : 1
+}
+> db.mobile.createIndex({name:1},{unique:true});
+{
+	"createdCollectionAutomatically" : false,
+	"numIndexesBefore" : 3,
+	"numIndexesAfter" : 4,
+	"ok" : 1
+}
+> db.mobile.showIndexes();
+2022-10-31T14:55:04.420+0530 TypeError: Property 'showIndexes' of object mongot31342db.mobile is not a function
+> db.mobile.getIndexes();
+[
+	{
+		"v" : 1,
+		"key" : {
+			"_id" : 1
+		},
+		"name" : "_id_",
+		"ns" : "mongot31342db.mobile"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"price" : 1
+		},
+		"name" : "price_1",
+		"ns" : "mongot31342db.mobile"
+	},
+	{
+		"v" : 1,
+		"key" : {
+			"name" : 1,
+			"brand" : 1
+		},
+		"name" : "name_1_brand_1",
+		"ns" : "mongot31342db.mobile"
+	},
+	{
+		"v" : 1,
+		"unique" : true,
+		"key" : {
+			"name" : 1
+		},
+		"name" : "name_1",
+		"ns" : "mongot31342db.mobile"
+	}
+]
+> db.mobile.getIndexeStats();
+2022-10-31T14:55:35.179+0530 TypeError: Property 'getIndexeStats' of object mongot31342db.mobile is not a function
+> db.mobile.getIndexStats();
+this command requires starting mongod with --enableExperimentalIndexStatsCmd
+error executing indexStats command: {
+	"ok" : 0,
+	"errmsg" : "no such cmd: indexStats",
+	"code" : 59,
+	"bad cmd" : {
+		"indexStats" : "mobile"
+	}
+}
+> db.mobile.sort({price:1});
+2022-10-31T14:56:44.429+0530 TypeError: Property 'sort' of object mongot31342db.mobile is not a function
+> db.mobile.find.sort({price:1});
+2022-10-31T14:56:53.645+0530 TypeError: Object function ( query , fields , limit , skip, batchSize, options ){
+    var cursor = new DBQuery( this._mongo , this._db , this ,
+                        this._fullName , this._massageObject( query ) , fields , limit , skip , batchSize , options || this.getQueryOptions() );
+
+    var connObj = this.getMongo();
+    var readPrefMode = connObj.getReadPrefMode();
+    if (readPrefMode != null) {
+        cursor.readPref(readPrefMode, connObj.getReadPrefTagSet());
+    }
+
+    return cursor;
+} has no method 'sort'
+> db.mobile.find().sort({price:1});
+{ "_id" : ObjectId("6348ddc2e12c1015962e118e"), "name" : "Nokia 3310", "brand" : "Nokia", "Version" : 1, "specification" : { "RAM" : 1, "ROM" : 0, "processor" : "NA", "Camera" : "NA", "Color" : [ "Grey", "Black" ] }, "price" : 1600, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348e095e12c1015962e1193"), "name" : "Fold 4", "brand" : "Samsung", "Version" : 1, "specification" : { "RAM" : 16, "ROM" : 1024, "processor" : "Snapdragon 8th Gen", "Camera" : 108, "Color" : [ "Black", "Grey" ] }, "price" : 10007, "offer" : false, "warranty" : 1 }
+{ "_id" : ObjectId("6348dbc5e12c1015962e118a"), "name" : "Narzo 50", "brand" : "Real Me", "Version" : 2, "specification" : { "RAM" : 4, "ROM" : 128, "processor" : "Mediatek Helio G90", "Camera" : 48, "Color" : [ "Blue", "Green", "Black" ] }, "price" : 13000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348e007e12c1015962e1191"), "name" : "Narzo 30", "brand" : "Real Me", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Snapdragon 880", "Camera" : 50, "Color" : [ "Aurora Green", "Meteor Grey" ] }, "price" : 17000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348e04ee12c1015962e1192"), "name" : "J7 6", "brand" : "Samsung", "Version" : 1, "specification" : { "RAM" : 2, "ROM" : 16, "processor" : "Octacore", "Camera" : 18, "Color" : [ "Golden", "Grey" ] }, "price" : 17000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dfb9e12c1015962e1190"), "name" : "Edge 30", "brand" : "Motorola", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Qualcomm Snapdragon 778G", "Camera" : 50, "Color" : [ "Aurora Green", "Meteor Grey" ] }, "price" : 27000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dcd9e12c1015962e118b"), "name" : "Nord 2", "brand" : "One Plus", "Version" : 1, "specification" : { "RAM" : 8, "ROM" : 128, "processor" : "Mediatek Dimensity 1200", "Camera" : 48, "Color" : [ "Blue", "Grey", "Green" ] }, "price" : 28000, "offer" : false, "warranty" : 2 }
+{ "_id" : ObjectId("6348e145e12c1015962e1194"), "name" : "Nothing Phone 1", "brand" : "Nothing", "Version" : 1, "specification" : { "RAM" : 8, "ROM" : 256, "processor" : "Snapdragon 778", "Camera" : 50, "Color" : [ "Black", "White" ] }, "price" : 33000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dee3e12c1015962e118f"), "name" : "Pixel 6a", "brand" : "Google", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Google Tensor", "Camera" : 12, "Color" : [ "Charcoal", "Grey" ] }, "price" : 35000, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348dd41e12c1015962e118c"), "name" : "Iphone 13", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : [ "Red", "Space Grey", "Midnight Black" ] }, "price" : 80000, "offer" : false, "warranty" : 0 }
+{ "_id" : ObjectId("6348dd51e12c1015962e118d"), "name" : "Iphone 14", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : [ "Red", "Space Grey", "Midnight Black" ] }, "price" : 80000, "offer" : false, "warranty" : 1 }
+> db.mobile.find().sort({price:1}).pretty();
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+> db.mobile.count({price:{$gt 10000}}) using index {price:1}
+2022-10-31T14:59:17.373+0530 SyntaxError: Unexpected number
+> db.mobile.count({price:{$gt 10000}}), using index {price:1}
+2022-10-31T14:59:28.613+0530 SyntaxError: Unexpected number
+> db.mobile.count({price:{$gt 10000}})
+2022-10-31T14:59:38.004+0530 SyntaxError: Unexpected number
+> db.mobile.count({price:{$gt:10000}})
+10
+> db.mobile.count({price:{$gt:10000}}),using index {price:1}
+2022-10-31T15:01:58.199+0530 SyntaxError: Unexpected identifier
+> db.mobile.count({price:{$gt:10000}})
+10
+> 
+> 
+> 
+> 
+> 
+> db.mobile.aggregate([{$group:{_id:"$brand"},price:{$min:"$price"},{$sort:{price:1}}}]);
+2022-10-31T15:07:51.168+0530 SyntaxError: Unexpected token {
+> db.mobile.aggregate([{$group:{_id:"$brand"}},price:{$min:"$price"},{$sort:{price:1}}}]);
+2022-10-31T15:08:13.305+0530 SyntaxError: Unexpected token :
+> db.mobile.aggregate([{$group:{_id:"$brand"}},price:{$min:"$price"},{$sort:{price:1}}]);
+2022-10-31T15:09:02.866+0530 SyntaxError: Unexpected token :
+> db.mobile.aggregate([{$group:{_id:"$brand"}},{price:{$min:"$price"}},{$sort:{price:1}}]);
+assert: command failed: {
+	"errmsg" : "exception: Unrecognized pipeline stage name: 'price'",
+	"code" : 16436,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: Unrecognized pipeline stage name: 'price'",
+	"code" : 16436,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:09:14.150+0530 Error: command failed: {
+	"errmsg" : "exception: Unrecognized pipeline stage name: 'price'",
+	"code" : 16436,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> db.mobile.aggregate([{$group:{$_id:"$name"}}])
+assert: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$_id' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$_id' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:10:41.851+0530 Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$_id' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{$name:"$name"}}])
+assert: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$name' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$name' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:10:54.820+0530 Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$name' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{_id:"$name"}}])
+{ "_id" : "Nothing Phone 1" }
+{ "_id" : "J7 6" }
+{ "_id" : "Narzo 30" }
+{ "_id" : "Narzo 50" }
+{ "_id" : "Fold 4" }
+{ "_id" : "Pixel 6a" }
+{ "_id" : "Iphone 13" }
+{ "_id" : "Nokia 3310" }
+{ "_id" : "Iphone 14" }
+{ "_id" : "Nord 2" }
+{ "_id" : "Edge 30" }
+> db.mobile.aggregate([{$group:{_id:"$name"}}]).pretty()
+{ "_id" : "Nothing Phone 1" }
+{ "_id" : "J7 6" }
+{ "_id" : "Narzo 30" }
+{ "_id" : "Narzo 50" }
+{ "_id" : "Fold 4" }
+{ "_id" : "Pixel 6a" }
+{ "_id" : "Iphone 13" }
+{ "_id" : "Nokia 3310" }
+{ "_id" : "Iphone 14" }
+{ "_id" : "Nord 2" }
+{ "_id" : "Edge 30" }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"}}}]).pretty()
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "J7 6", "price" : 17000 }
+{ "_id" : "Narzo 30", "price" : 17000 }
+{ "_id" : "Narzo 50", "price" : 13000 }
+{ "_id" : "Fold 4", "price" : 10007 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Nokia 3310", "price" : 1600 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+{ "_id" : "Edge 30", "price" : 27000 }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"},$sort:{price:1}}}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:13:10.234+0530 Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"},$sort:{$price:1}}}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:13:15.347+0530 Error: command failed: {
+	"errmsg" : "exception: the group aggregate field name '$sort' cannot be an operator name",
+	"code" : 15950,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price",$sort:{price:1}}}}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: unknown group operator '$sort'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: unknown group operator '$sort'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:13:26.018+0530 Error: command failed: {
+	"errmsg" : "exception: unknown group operator '$sort'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"}},{$sort:{price:-1}}}]).pretty()
+2022-10-31T15:14:22.657+0530 SyntaxError: Unexpected token {
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"}}},{$sort:{price:-1}}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+{ "_id" : "Edge 30", "price" : 27000 }
+{ "_id" : "J7 6", "price" : 17000 }
+{ "_id" : "Narzo 30", "price" : 17000 }
+{ "_id" : "Narzo 50", "price" : 13000 }
+{ "_id" : "Fold 4", "price" : 10007 }
+{ "_id" : "Nokia 3310", "price" : 1600 }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$min:"$price"}}},{$sort:{price:-1}},{$limit:4}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$max:"$price"}}},{$sort:{price:-1}},{$limit:4}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$max:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+> db.mobile.aggregate([{$match:{brand:"narzo",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: bad query: BadValue unknown operator: $sum",
+	"code" : 16810,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: bad query: BadValue unknown operator: $sum",
+	"code" : 16810,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:16:42.113+0530 Error: command failed: {
+	"errmsg" : "exception: bad query: BadValue unknown operator: $sum",
+	"code" : 16810,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$match:{brand:"narzo"},{$match:price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+[1]+  Stopped                 ./mongo 10.10.12.108/mongot31342db -u t31342 -p
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/mongot31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/mongot31342db
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+> { "_id" : "Iphone 13", "price" : 80000 }
+2022-10-31T15:18:34.825+0530 SyntaxError: Unexpected token :
+> db.mobile.aggregate([{$match:"Realme"},{$group:{_id:"$brand",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:20:58.265+0530 Error: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$match:"Realme"},{$group:{_id:null,price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+assert: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:21:13.872+0530 Error: command failed: {
+	"errmsg" : "exception: the match filter must be an expression in an object",
+	"code" : 15959,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$group:{_id:"$name",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+{ "_id" : "Iphone 13", "price" : 80000 }
+{ "_id" : "Iphone 14", "price" : 80000 }
+{ "_id" : "Pixel 6a", "price" : 35000 }
+{ "_id" : "Nothing Phone 1", "price" : 33000 }
+{ "_id" : "Nord 2", "price" : 28000 }
+> db.mobile.aggregate([{$group:{_id:"$brand",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:5}]).pretty()
+{ "_id" : "Apple", "price" : 160000 }
+{ "_id" : "Google", "price" : 35000 }
+{ "_id" : "Nothing", "price" : 33000 }
+{ "_id" : "Real Me", "price" : 30000 }
+{ "_id" : "One Plus", "price" : 28000 }
+> db.mobile.aggregate([{$group:{_id:"$brand",price:{$sum:"$price"}}},{$sort:{price:1}},{$limit:10}]).pretty()
+{ "_id" : "Nokia", "price" : 1600 }
+{ "_id" : "Motorola", "price" : 27000 }
+{ "_id" : "Samsung", "price" : 27007 }
+{ "_id" : "One Plus", "price" : 28000 }
+{ "_id" : "Real Me", "price" : 30000 }
+{ "_id" : "Nothing", "price" : 33000 }
+{ "_id" : "Google", "price" : 35000 }
+{ "_id" : "Apple", "price" : 160000 }
+> db.mobile.aggregate([{$group:{_id:"$brand",price:{$sum:"$price"}}},{$sort:{price:-1}},{$limit:10}]).pretty()
+{ "_id" : "Apple", "price" : 160000 }
+{ "_id" : "Google", "price" : 35000 }
+{ "_id" : "Nothing", "price" : 33000 }
+{ "_id" : "Real Me", "price" : 30000 }
+{ "_id" : "One Plus", "price" : 28000 }
+{ "_id" : "Samsung", "price" : 27007 }
+{ "_id" : "Motorola", "price" : 27000 }
+{ "_id" : "Nokia", "price" : 1600 }
+> db.mobile.aggregate([{$group:{_id:"$brand",price:{$first:"$price"}}},{$sort:{price:-1}},{$limit:10}]).pretty()
+{ "_id" : "Apple", "price" : 80000 }
+{ "_id" : "Google", "price" : 35000 }
+{ "_id" : "Nothing", "price" : 33000 }
+{ "_id" : "One Plus", "price" : 28000 }
+{ "_id" : "Motorola", "price" : 27000 }
+{ "_id" : "Samsung", "price" : 17000 }
+{ "_id" : "Real Me", "price" : 13000 }
+{ "_id" : "Nokia", "price" : 1600 }
+> db.mobile.aggregate([{$group:{_id:"$specification.RAM",price:{$first:"$price"}}},{$sort:{price:-1}},{$limit:10}]).pretty()
+{ "_id" : 6, "price" : 80000 }
+{ "_id" : 8, "price" : 28000 }
+{ "_id" : 2, "price" : 17000 }
+{ "_id" : 4, "price" : 13000 }
+{ "_id" : 16, "price" : 10007 }
+{ "_id" : 1, "price" : 1600 }
+> db.mobile.aggregate([{$group:{_id:"$specification.RAM",price:{$max:"$price"}}},{$sort:{price:-1}},{$limit:10}]).pretty()
+{ "_id" : 6, "price" : 80000 }
+{ "_id" : 8, "price" : 33000 }
+{ "_id" : 2, "price" : 17000 }
+{ "_id" : 4, "price" : 13000 }
+{ "_id" : 16, "price" : 10007 }
+{ "_id" : 1, "price" : 1600 }
+> db.mobile.aggregate([{$group:{_id:"$specification.RAM",price:{$max:"$price"}}},{$sort:{"specification.RAM":-1}},{$limit:10}]).pretty()
+{ "_id" : 16, "price" : 10007 }
+{ "_id" : 1, "price" : 1600 }
+{ "_id" : 2, "price" : 17000 }
+{ "_id" : 6, "price" : 80000 }
+{ "_id" : 8, "price" : 33000 }
+{ "_id" : 4, "price" : 13000 }
+> db.mobile.aggregate([{$group:{_id:"$specification.RAM",price:{$max:"$price"}}},{$sort:{"specification.RAM":1}},{$limit:10}]).pretty()
+{ "_id" : 16, "price" : 10007 }
+{ "_id" : 1, "price" : 1600 }
+{ "_id" : 2, "price" : 17000 }
+{ "_id" : 6, "price" : 80000 }
+{ "_id" : 8, "price" : 33000 }
+{ "_id" : 4, "price" : 13000 }
+> db.mobile.aggregate([{$group:{_id:"$specification.RAM",price:{$first:"$price"}}},{$sort:{price:-1}},{$limit:10},{$skip:3}]).pretty()
+{ "_id" : 4, "price" : 13000 }
+{ "_id" : 16, "price" : 10007 }
+{ "_id" : 1, "price" : 1600 }
+> db.mobile.aggregate([{$unwind:"$specification.color"}])
+> db.mobile.aggregate([{$unwind:"$specification.Color"}])
+{ "_id" : ObjectId("6348dbc5e12c1015962e118a"), "name" : "Narzo 50", "brand" : "Real Me", "Version" : 2, "specification" : { "RAM" : 4, "ROM" : 128, "processor" : "Mediatek Helio G90", "Camera" : 48, "Color" : "Blue" }, "price" : 13000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dbc5e12c1015962e118a"), "name" : "Narzo 50", "brand" : "Real Me", "Version" : 2, "specification" : { "RAM" : 4, "ROM" : 128, "processor" : "Mediatek Helio G90", "Camera" : 48, "Color" : "Green" }, "price" : 13000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dbc5e12c1015962e118a"), "name" : "Narzo 50", "brand" : "Real Me", "Version" : 2, "specification" : { "RAM" : 4, "ROM" : 128, "processor" : "Mediatek Helio G90", "Camera" : 48, "Color" : "Black" }, "price" : 13000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dcd9e12c1015962e118b"), "name" : "Nord 2", "brand" : "One Plus", "Version" : 1, "specification" : { "RAM" : 8, "ROM" : 128, "processor" : "Mediatek Dimensity 1200", "Camera" : 48, "Color" : "Blue" }, "price" : 28000, "offer" : false, "warranty" : 2 }
+{ "_id" : ObjectId("6348dcd9e12c1015962e118b"), "name" : "Nord 2", "brand" : "One Plus", "Version" : 1, "specification" : { "RAM" : 8, "ROM" : 128, "processor" : "Mediatek Dimensity 1200", "Camera" : 48, "Color" : "Grey" }, "price" : 28000, "offer" : false, "warranty" : 2 }
+{ "_id" : ObjectId("6348dcd9e12c1015962e118b"), "name" : "Nord 2", "brand" : "One Plus", "Version" : 1, "specification" : { "RAM" : 8, "ROM" : 128, "processor" : "Mediatek Dimensity 1200", "Camera" : 48, "Color" : "Green" }, "price" : 28000, "offer" : false, "warranty" : 2 }
+{ "_id" : ObjectId("6348dd41e12c1015962e118c"), "name" : "Iphone 13", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Red" }, "price" : 80000, "offer" : false, "warranty" : 0 }
+{ "_id" : ObjectId("6348dd41e12c1015962e118c"), "name" : "Iphone 13", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Space Grey" }, "price" : 80000, "offer" : false, "warranty" : 0 }
+{ "_id" : ObjectId("6348dd41e12c1015962e118c"), "name" : "Iphone 13", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Midnight Black" }, "price" : 80000, "offer" : false, "warranty" : 0 }
+{ "_id" : ObjectId("6348dd51e12c1015962e118d"), "name" : "Iphone 14", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Red" }, "price" : 80000, "offer" : false, "warranty" : 1 }
+{ "_id" : ObjectId("6348dd51e12c1015962e118d"), "name" : "Iphone 14", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Space Grey" }, "price" : 80000, "offer" : false, "warranty" : 1 }
+{ "_id" : ObjectId("6348dd51e12c1015962e118d"), "name" : "Iphone 14", "brand" : "Apple", "Version" : 2, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "A12 Bionic", "Camera" : 18, "Color" : "Midnight Black" }, "price" : 80000, "offer" : false, "warranty" : 1 }
+{ "_id" : ObjectId("6348ddc2e12c1015962e118e"), "name" : "Nokia 3310", "brand" : "Nokia", "Version" : 1, "specification" : { "RAM" : 1, "ROM" : 0, "processor" : "NA", "Camera" : "NA", "Color" : "Grey" }, "price" : 1600, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348ddc2e12c1015962e118e"), "name" : "Nokia 3310", "brand" : "Nokia", "Version" : 1, "specification" : { "RAM" : 1, "ROM" : 0, "processor" : "NA", "Camera" : "NA", "Color" : "Black" }, "price" : 1600, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348dee3e12c1015962e118f"), "name" : "Pixel 6a", "brand" : "Google", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Google Tensor", "Camera" : 12, "Color" : "Charcoal" }, "price" : 35000, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348dee3e12c1015962e118f"), "name" : "Pixel 6a", "brand" : "Google", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Google Tensor", "Camera" : 12, "Color" : "Grey" }, "price" : 35000, "offer" : true, "warranty" : 10 }
+{ "_id" : ObjectId("6348dfb9e12c1015962e1190"), "name" : "Edge 30", "brand" : "Motorola", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Qualcomm Snapdragon 778G", "Camera" : 50, "Color" : "Aurora Green" }, "price" : 27000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348dfb9e12c1015962e1190"), "name" : "Edge 30", "brand" : "Motorola", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Qualcomm Snapdragon 778G", "Camera" : 50, "Color" : "Meteor Grey" }, "price" : 27000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348e007e12c1015962e1191"), "name" : "Narzo 30", "brand" : "Real Me", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Snapdragon 880", "Camera" : 50, "Color" : "Aurora Green" }, "price" : 17000, "offer" : true, "warranty" : 1 }
+{ "_id" : ObjectId("6348e007e12c1015962e1191"), "name" : "Narzo 30", "brand" : "Real Me", "Version" : 1, "specification" : { "RAM" : 6, "ROM" : 128, "processor" : "Snapdragon 880", "Camera" : 50, "Color" : "Meteor Grey" }, "price" : 17000, "offer" : true, "warranty" : 1 }
+Type "it" for more
+> db.mobile.aggregate([{$unwind:"$specification.Color"}]).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : "Blue"
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : "Green"
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : "Black"
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : "Blue"
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : "Grey"
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : "Green"
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Red"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Space Grey"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Midnight Black"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Red"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Space Grey"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : "Midnight Black"
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : "Grey"
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : "Black"
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : "Charcoal"
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : "Grey"
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : "Aurora Green"
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : "Meteor Grey"
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : "Aurora Green"
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : "Meteor Grey"
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+Type "it" for more
+> db.mobile.aggregate([{$match:{name:"RealMe"}}])
+> db.mobile.aggregate([{$match:{name:"RealMe"}},{$group:{_id:"$name",count:{$sum:1}}}])
+> db.mobile.aggregate([{$match:{name:"Real Me"}},{$group:{_id:"$name",count:{$sum:1}}}])
+> db.mobile.aggregate([{$match:{name:"Real Me"}},{$group:{_id:"$name",count:{$name:1}}}])
+assert: command failed: {
+	"errmsg" : "exception: unknown group operator '$name'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed
+Error: command failed: {
+	"errmsg" : "exception: unknown group operator '$name'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed
+    at Error (<anonymous>)
+    at doassert (src/mongo/shell/assert.js:11:14)
+    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
+    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
+    at (shell):1:11
+2022-10-31T15:30:01.115+0530 Error: command failed: {
+	"errmsg" : "exception: unknown group operator '$name'",
+	"code" : 15952,
+	"ok" : 0
+} : aggregate failed at src/mongo/shell/assert.js:13
+> db.mobile.aggregate([{$match:{name:"Real Me"}},{$group:{_id:"$name",count:{$:1}}}])
+
+

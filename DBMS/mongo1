@@ -1,0 +1,2076 @@
+student@student-OptiPlex-3020:~/mongodb-linux-x86_64-2.6.3/bin$ ./mongo 10.10.12.108/mongot31342db -u t31342 -p
+MongoDB shell version: 2.6.3
+Enter password: 
+connecting to: 10.10.12.108/mongot31342db
+> show collections
+mobile
+system.indexes
+> db.mobile.find().pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find().pretty().sort({price:1})
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+> db.mobile.find({"specification.Color":$in ["Black","Grey"]}}).pretty();
+2022-10-14T09:56:05.905+0530 SyntaxError: Unexpected token }
+> db.mobile.find({"specification.Color":{$in ["Black","Grey"]}}).pretty();
+2022-10-14T09:56:18.880+0530 SyntaxError: Unexpected token [
+> db.mobile.find({"specification.Color":{$in :["Black","Grey"]}}).pretty();
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({price:{$lt:{15000}}}).pretty()
+2022-10-14T09:57:41.994+0530 SyntaxError: Unexpected token }
+> db.mobile.find({price:{$lt:15000}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+> db.mobile.find({brand:{$in :["Samsung","Real Me"]}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+> db.mobile.find({brand:{$nin :["Nokia"]}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green",
+			"Black"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({warranty:{$gte:1} $and price:{$gte:20000}}).pretty()
+2022-10-14T10:02:01.400+0530 SyntaxError: Unexpected identifier
+> db.mobile.find({warranty:{$gte:1} $and {price:{$gte:20000}}}).pretty()
+2022-10-14T10:02:15.720+0530 SyntaxError: Unexpected identifier
+> db.mobile.find({warranty:{$gte:1}} $and price:{$gte:20000}}).pretty()
+2022-10-14T10:02:30.424+0530 SyntaxError: Unexpected identifier
+> db.mobile.find({warranty:{$gte:1}} $and {price:{$gte:20000}}).pretty()
+2022-10-14T10:02:39.584+0530 SyntaxError: Unexpected identifier
+> db.mobile.find({{warranty:{$gte:1}} $and {price:{$gte:20000}}}).pretty()
+2022-10-14T10:02:48.342+0530 SyntaxError: Unexpected token {
+> db.mobile.find({$and:[{price:{$gte:20000}},{warranty:{$gte:1}}]}).pretty()
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({version:{$eq:1}}).pretty()
+> db.mobile.find({version:{$eq 1}}).pretty()
+2022-10-14T10:06:22.197+0530 SyntaxError: Unexpected number
+> db.mobile.find({version:$eq 1}).pretty()
+2022-10-14T10:06:27.263+0530 SyntaxError: Unexpected number
+> db.mobile.find({version:{$eq 1}}).pretty()
+2022-10-14T10:06:34.158+0530 SyntaxError: Unexpected number
+> db.mobile.find({version:{$eq:1}}).pretty()
+> db.mobile.find({version:{$eq:"1"}}).pretty()
+> db.mobile.find({version:{$eq:1}}).pretty()
+> db.mobile.find({Version:{$eq:1}}).pretty()
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({offer:{$ne:true}}).pretty()
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey",
+			"Green"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey",
+			"Midnight Black"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+> > db.mobile.find({"specification.Color"}).slice().pretty()
+2022-10-14T10:15:33.952+0530 SyntaxError: Unexpected token >
+> > db.mobile.find({"specification.Color"}).slice(0).pretty()
+2022-10-14T10:15:43.816+0530 SyntaxError: Unexpected token >
+>  db.mobile.find({"specification.Color"}).slice(0).pretty()
+2022-10-14T10:15:51.960+0530 SyntaxError: Unexpected token }
+> db.mobile.find("specification.Color").slice(0).pretty()
+2022-10-14T10:15:59.409+0530 TypeError: Object DBQuery: mongot31342db.mobile -> { "$where" : "specification.Color" } has no method 'slice'
+> db.mobile.find("specification.Color":{$slice:1}).pretty()
+2022-10-14T10:16:59.271+0530 SyntaxError: Unexpected token :
+> db.mobile.find("specification.Color":{$slice:1}}).pretty()
+2022-10-14T10:17:05.127+0530 SyntaxError: Unexpected token :
+> db.mobile.find({"specification.Color":{$slice:1}}).pretty()
+error: {
+	"$err" : "Can't canonicalize query: BadValue unknown operator: $slice",
+	"code" : 17287
+}
+> db.mobile.find({"specification.Color":{$slice:2}}).pretty()
+error: {
+	"$err" : "Can't canonicalize query: BadValue unknown operator: $slice",
+	"code" : 17287
+}
+> db.mobile.find({brand:"Samsung","specification.Color":{$slice:2}}).pretty()
+error: {
+	"$err" : "Can't canonicalize query: BadValue unknown operator: $slice",
+	"code" : 17287
+}
+> db.mobile.find({},{"specification.Color":{$slice:2}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Green"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue",
+			"Grey"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red",
+			"Space Grey"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey",
+			"Black"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal",
+			"Grey"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green",
+			"Meteor Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden",
+			"Grey"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black",
+			"Grey"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black",
+			"White"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({},{"specification.Color":{$slice:1}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({},{"specification.Color":{$slice:0}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [ ]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [ ]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [ ]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [ ]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [ ]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [ ]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [ ]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [ ]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [ ]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [ ]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [ ]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({},{"specification.Color":{$slice:1}}).pretty()
+{
+	"_id" : ObjectId("6348dbc5e12c1015962e118a"),
+	"name" : "Narzo 50",
+	"brand" : "Real Me",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 4,
+		"ROM" : 128,
+		"processor" : "Mediatek Helio G90",
+		"Camera" : 48,
+		"Color" : [
+			"Blue"
+		]
+	},
+	"price" : 13000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348dcd9e12c1015962e118b"),
+	"name" : "Nord 2",
+	"brand" : "One Plus",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 128,
+		"processor" : "Mediatek Dimensity 1200",
+		"Camera" : 48,
+		"Color" : [
+			"Blue"
+		]
+	},
+	"price" : 28000,
+	"offer" : false,
+	"warranty" : 2
+}
+{
+	"_id" : ObjectId("6348dd41e12c1015962e118c"),
+	"name" : "Iphone 13",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 0
+}
+{
+	"_id" : ObjectId("6348dd51e12c1015962e118d"),
+	"name" : "Iphone 14",
+	"brand" : "Apple",
+	"Version" : 2,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "A12 Bionic",
+		"Camera" : 18,
+		"Color" : [
+			"Red"
+		]
+	},
+	"price" : 80000,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348ddc2e12c1015962e118e"),
+	"name" : "Nokia 3310",
+	"brand" : "Nokia",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 1,
+		"ROM" : 0,
+		"processor" : "NA",
+		"Camera" : "NA",
+		"Color" : [
+			"Grey"
+		]
+	},
+	"price" : 1600,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dee3e12c1015962e118f"),
+	"name" : "Pixel 6a",
+	"brand" : "Google",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Google Tensor",
+		"Camera" : 12,
+		"Color" : [
+			"Charcoal"
+		]
+	},
+	"price" : 35000,
+	"offer" : true,
+	"warranty" : 10
+}
+{
+	"_id" : ObjectId("6348dfb9e12c1015962e1190"),
+	"name" : "Edge 30",
+	"brand" : "Motorola",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Qualcomm Snapdragon 778G",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green"
+		]
+	},
+	"price" : 27000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e007e12c1015962e1191"),
+	"name" : "Narzo 30",
+	"brand" : "Real Me",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 6,
+		"ROM" : 128,
+		"processor" : "Snapdragon 880",
+		"Camera" : 50,
+		"Color" : [
+			"Aurora Green"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e04ee12c1015962e1192"),
+	"name" : "J7 6",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 2,
+		"ROM" : 16,
+		"processor" : "Octacore",
+		"Camera" : 18,
+		"Color" : [
+			"Golden"
+		]
+	},
+	"price" : 17000,
+	"offer" : true,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e095e12c1015962e1193"),
+	"name" : "Fold 4",
+	"brand" : "Samsung",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 16,
+		"ROM" : 1024,
+		"processor" : "Snapdragon 8th Gen",
+		"Camera" : 108,
+		"Color" : [
+			"Black"
+		]
+	},
+	"price" : 10007,
+	"offer" : false,
+	"warranty" : 1
+}
+{
+	"_id" : ObjectId("6348e145e12c1015962e1194"),
+	"name" : "Nothing Phone 1",
+	"brand" : "Nothing",
+	"Version" : 1,
+	"specification" : {
+		"RAM" : 8,
+		"ROM" : 256,
+		"processor" : "Snapdragon 778",
+		"Camera" : 50,
+		"Color" : [
+			"Black"
+		]
+	},
+	"price" : 33000,
+	"offer" : true,
+	"warranty" : 1
+}
+> db.mobile.find({},{"specification.Color":{$slice:1}}).pretty()
+
+
