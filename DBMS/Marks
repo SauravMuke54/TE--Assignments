@@ -1,0 +1,69 @@
+create function Results(rno int,name varchar(20),marks int) returns VARCHAR(20) DETERMINISTIC
+begin
+if marks < 0 or rno<0  or marks>1500 then
+signal sqlstate '45000' set message_text="InValid Input";
+else
+insert into Stud_Marks values(rno,name,marks);
+if marks>=990 and marks<=1500 then
+insert into Result values(rno,name,"Distinction");
+return "Distinction";
+elseif marks<=989 and marks>=900 then
+insert into Result values(rno,name,"First Class");
+return "First Class";
+elseif marks <=899 and marks>=825 then
+insert into Result values(rno,name,"Second Class");
+return "Second Class";
+else 
+insert into Result values(rno,name,"Fail");
+return "Fail";
+end if;
+end if;
+end;
+
+
+
+
+MariaDB [practicals]> select Results(-1,"ss",87)
+    -> @
+ERROR 1644 (45000): InValid Input
+MariaDB [practicals]> select Results(1,"ss",-87)
+    -> select Results(1,"ss",-87)@
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select Results(1,"ss",-87)' at line 2
+MariaDB [practicals]> select Results(1,"ss",-87)@
+ERROR 1644 (45000): InValid Input
+MariaDB [practicals]> select Results(1,"ss",1587)@
+ERROR 1644 (45000): InValid Input
+MariaDB [practicals]> select Results(5,"Om",987)@
++---------------------+
+| Results(5,"Om",987) |
++---------------------+
+| First Class         |
++---------------------+
+1 row in set (0.004 sec)
+
+MariaDB [practicals]> select * from Stud_Marks;
+    -> @
++------+--------+-------+
+| rno  | name   | marks |
++------+--------+-------+
+|    1 | Sam    |  1500 |
+|    2 | Saurav |  1455 |
+|  -13 | Pinal  |   345 |
+|    5 | Om     |   987 |
++------+--------+-------+
+4 rows in set (0.001 sec)
+
+MariaDB [practicals]> select * from Result;
+    -> @
++------+--------+-------------+
+| rno  | name   | class       |
++------+--------+-------------+
+|    2 | Saurav | Distinction |
+|  -13 | Pinal  | Fail        |
+|    5 | Om     | First Class |
++------+--------+-------------+
+3 rows in set (0.001 sec)
+
+MariaDB [practicals]> 
+
+

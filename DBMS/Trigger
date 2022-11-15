@@ -1,0 +1,53 @@
+create trigger t1 
+before insert on 
+Student 
+for each row
+begin
+if new.count>5 then
+signal sqlstate '45000' set message_text="Maximum 5 books can be issued";
+end if;
+end;
+=====================================================================================================================
+create trigger t2 after insert on Student
+for each row
+begin
+update Total set tot=tot-new.count;
+end;
+====================================================================================================================
+create trigger t3 before delete on Student for each row
+begin
+insert into Library_Audit values(old.rno,old.name,old.count);
+end;
+
+================================================================================================================
+create trigger t4 before update on Student for each row
+begin
+if new.count > 5 then
+signal sqlstate '45000' set message_text="Maximum value can be 5";
+end if;
+insert into Library_Audit values(old.rno,old.name,old.count);
+end;
+=================================================================================================================
+create trigger t5 after delete on Student 
+for each row
+begin
+update Total set tot=tot+old.count;
+end;
+==============================================================================================================
+create trigger t6 after update on Student
+for each row
+begin
+if new.count >= old.count then
+update Total set tot=tot-(new.count-old.count);
+else 
+update Total set tot=tot+(old.count-new.count);
+end if;
+end;
+
+==================================================================================================================
+create procedure display()
+begin
+select * from Student;
+select * from Total;
+select * from Library_Audit;
+end;

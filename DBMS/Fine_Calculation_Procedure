@@ -1,0 +1,27 @@
+create procedure calculateFin(rno int , bname varchar(20))
+begin
+declare v1 date;
+declare v2 int;
+declare b int;
+DECLARE CONTINUE HANDLER FOR NOT FOUND 
+SET b = 1;
+if rno<0 then
+signal sqlstate '45000' set message_text="Invalid RollNo";
+else
+select doi into v1 from Borrower where rollno=rno;
+if b=1 then 
+select concat("User Not Found");
+else 
+set v2:=datediff(curdate(),v1);
+if v2>=15 and v2<=30 then
+insert into Fine values(rno,curdate(),(v2-15)*5);
+elseif v2>30 then
+insert into Fine values(rno,curdate(),(15*5)+(v2-30)*50);
+else 
+insert into Fine values(rno,curdate(),0);
+end if;
+update Borrower set status='R' where rollno=rno;
+select concat('Book Returned');
+end if;
+end if;
+end;

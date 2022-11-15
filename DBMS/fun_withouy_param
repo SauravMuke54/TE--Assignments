@@ -1,0 +1,7 @@
+create function calMarks()returns varchar(20) deterministic
+begin
+call calculatemk2();
+return 'Done'
+end;
+
+

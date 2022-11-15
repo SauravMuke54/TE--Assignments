@@ -1,0 +1,30 @@
+create procedure calculateMarks()
+begin
+declare rn int;
+declare nm varchar(30);
+declare mk int;
+declare  b int ;
+declare c1 cursor for select * from Stud_Marks;
+declare exit handler for not found set b=1;
+open c1;
+lb1:loop
+fetch c1 into rn,nm,mk;
+if mk>=990 and mk<=1500 then
+insert into Result values(rn,nm,"Distinction");
+elseif mk<=989 and mk>=900 then
+insert into Result values(rn,nm,"First Class");
+elseif mk <=899 and mk>=825 then
+insert into Result values(rn,nm,"Second Class");
+end if;
+end loop;
+end;
+
+
+
+
+============================================================
+create function calMarks()returns varchar(20) deterministic
+begin
+call calculatemk2();
+return 'Done'
+end;

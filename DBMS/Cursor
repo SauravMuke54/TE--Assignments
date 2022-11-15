@@ -1,0 +1,27 @@
+create procedure curProc()
+begin
+declare nm varchar(20);
+declare id,did,b int;
+declare c1 cursor for select * from new_emp where empid not in (select empid from old_emp);
+declare exit handler for not found set b=1;
+open c1;
+label1:loop
+fetch c1 into id,nm,did;
+insert into old_emp values(id,nm,did);
+end loop;
+end;
+=================================================================
+create procedure curProc1(dptid int)
+begin
+declare nm varchar(20);
+declare id,did,b int;
+declare c1 cursor for select * from new_emp where empid not in (select empid from old_emp) and deptid=dptid;
+declare exit handler for not found set b=1;
+open c1;
+label1:loop
+fetch c1 into id,nm,did;
+insert into old_emp values(id,nm,did);
+end loop;
+end;
+
+

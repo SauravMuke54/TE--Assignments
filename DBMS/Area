@@ -1,0 +1,32 @@
+create Procedure Area2()
+begin
+declare a int;
+set a:=5;
+label1:LOOP
+if a>9 then 
+leave label1;
+end if;
+insert into Area values(a,3.14*a*a);
+set a:=a+1;
+end LOOP;
+end;
+
+
+MariaDB [practicals]> call Area2()
+    -> @
+Query OK, 5 rows affected (0.016 sec)
+
+MariaDB [practicals]> select * from Area;
+    -> @
++--------+--------+
+| radius | area   |
++--------+--------+
+|      5 |   78.5 |
+|      6 | 113.04 |
+|      7 | 153.86 |
+|      8 | 200.96 |
+|      9 | 254.34 |
++--------+--------+
+5 rows in set (0.001 sec)
+
+
